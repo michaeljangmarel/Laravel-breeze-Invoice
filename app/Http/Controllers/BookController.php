@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\book;
+use App\Models\Packageorder;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use App\Http\Controllers\BookController;
@@ -67,5 +68,26 @@ class BookController extends Controller
          ];
     }
 
+    public function test(){
+        return view('testing');
+    }
+
+
+    public function pack(){
+         return view('inputPack');
+    }
+
+    public function order(Request $a){
+
+        Packageorder::create([
+            'pack_id' => $a->packid ,
+            'user_id' => $a->userid ,
+            'name' => $a->name ,
+            'email' => $a->email ,
+            'number' => $a->number
+        ]);
+
+        return redirect()->route('ui_all');
+    }
 
 }

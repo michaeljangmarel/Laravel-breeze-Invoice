@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\MovieController;
 use App\Http\Controllers\ProfileController;
 
 /*
@@ -50,5 +51,18 @@ Route::get('all' , [BookController::class , 'all'])->name('ui_all');
 
 Route::get('downloading/{da}' , [BookController::class , 'down'])->name('prodown');
 
+Route::get('tail' , [BookController::class , 'test']);
+
+Route::get("packui" , [BookController::class , 'pack'])->name("uipack");
+
+ROUTE::post("ordering" , [BookController::class , 'order'])->name("orderings");
 
 
+Route::controller(MovieController::class)->group(function(){
+
+     Route::get("page" , 'urll');
+
+     Route::post("urls" , 'databa' )->name('org');
+
+     Route::get("allMovie" , 'allmm')->name("allmn");
+});
