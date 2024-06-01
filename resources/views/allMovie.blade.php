@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="">
                     <div class="video-embed">
-                        <iframe width="560" height="315" src="{{ $data->vd }}" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="{{ $data->vd }}" frameborder="0"  ></iframe>
                     </div>
                      <p>{{ $data->name }}</p>
                 </div>

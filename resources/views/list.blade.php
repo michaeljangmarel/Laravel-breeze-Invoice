@@ -31,6 +31,9 @@
                             <a href="{{ route('prodown',$d->doc) }}">
                                 <button class="btn btn-primary">Download</button>
                             </a>
+                            <a href="{{ route('printAsFILE',$d->id) }}">
+                                <button class="btn  btn-warning">Print as file</button>
+                            </a>
                         </td>
                       </tr>
                     @endforeach

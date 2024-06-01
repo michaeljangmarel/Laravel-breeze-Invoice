@@ -1,0 +1,10 @@
+DATABASE = MYSQL (  sequilize )
+
+
+frame - laravel
+
+
+topic - relational database (database management system dbms)
+
+
+composer create-project laravel/laravel dbms-system  lastest version - "10 - 9.00"

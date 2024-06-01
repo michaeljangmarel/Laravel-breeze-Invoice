@@ -65,4 +65,12 @@ Route::controller(MovieController::class)->group(function(){
      Route::post("urls" , 'databa' )->name('org');
 
      Route::get("allMovie" , 'allmm')->name("allmn");
+
+     Route::get('ui-dash' , 'second')->name('secondPage');
+
+     route::get("prints/{id}" , 'printas')->name("printAsFILE");
 });
+
+
+
+

@@ -48,8 +48,8 @@ class BookController extends Controller
 
 
      public function down($da){
-
-        return response()->download(storage_path('app/pdfc/'.$da));
+         $data = book::where('id' , $da)->first();
+        return response()->download(storage_path('app/pdfc/'.$da , $da->name));
 
       }
 
