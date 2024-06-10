@@ -69,8 +69,9 @@ Route::controller(MovieController::class)->group(function(){
      Route::get('ui-dash' , 'second')->name('secondPage');
 
      route::get("prints/{id}" , 'printas')->name("printAsFILE");
-});
 
+     Route::delete('delete_one/{id}', 'remove');
 
+    });
 
 

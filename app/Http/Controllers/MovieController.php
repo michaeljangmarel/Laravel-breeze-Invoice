@@ -42,11 +42,19 @@ class MovieController extends Controller
     //     return [$detail] ;
     // }
 
+    public function remove($id){
+
+       $region = book::where('id' , $id)->first();
+       $region->delete();
+       return response()->json(['data' => "success" , "id" => $id  , 'name' => $region->name] , 200);
+    }
+
 
     public function books(){
 
 
         $all_book = book::get();
+
 
 
         return  response()->json($all_book, 200);
@@ -55,7 +63,6 @@ class MovieController extends Controller
     public function printas($id){
 
        $data = book::find($id);
-
         $pdf = Pdf::loadView( "admin.invoice" , compact("data"));
     return $pdf->download('orderDetail.pdf' );
     }

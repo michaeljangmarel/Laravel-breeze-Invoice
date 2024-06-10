@@ -31,8 +31,7 @@ class BookController extends Controller
             $a->file('doc')->storeAs('pdfc' , $org);
 
             $up['doc'] = $org ;
-
-        }
+      }
 
         book::create($up);
 
