@@ -78,7 +78,7 @@
     function deletepost(id) {
         if (confirm("Are u sure about that ?")) {
 
-            console.log(id);
+        
             $.ajaxSetup({
                 headers: {
                     'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -94,7 +94,6 @@
                     $("#tr" + result['id']).slideUp('slow');
 
                     console.log(result['message']);
-
                     showmessage(result['name']);
                 }
 
